@@ -1,0 +1,547 @@
+SQL> select CURRENT_TIMESTAMP FROM DUAL
+  2  ;
+
+CURRENT_TIMESTAMP                                                               
+---------------------------------------------------------------------------     
+31-JAN-24 02.23.38.138000 PM +05:30                                             
+
+SQL> SHOW USER
+USER is "MRIDUL"
+SQL> 
+SQL> DESC EMP
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ EMP                                                NUMBER(4)
+ ENAME                                              VARCHAR2(20)
+ JOB                                                VARCHAR2(20)
+ MGR                                                NUMBER(4)
+ HIREDATE                                           DATE
+ SAL                                                NUMBER(5)
+ COMM                                               NUMBER(4)
+ DEPTNO                                             NUMBER(2)
+
+SQL> SELECT * FROM EMP
+  2  ;
+
+no rows selected
+
+SQL> select * from EMP
+  2  ;
+
+no rows selected
+
+SQL> insert into emp values(1234, 'Saurabh', NULL, NULL, NULL, NULL, NULL, NULL)
+  2  ;
+
+1 row created.
+
+SQL> INSERT INTO emp VALUES(7369,'Smith','Clerk',7902,'17-DEC-80',7000,NULL,20);
+
+1 row created.
+
+SQL> select * from EMP;
+
+       EMP ENAME                JOB                         MGR HIREDATE        
+---------- -------------------- -------------------- ---------- ---------       
+       SAL       COMM     DEPTNO                                                
+---------- ---------- ----------                                                
+      1234 Saurabh                                                              
+                                                                                
+                                                                                
+      7369 Smith                Clerk                      7902 17-DEC-80       
+      7000                    20                                                
+                                                                                
+
+SQL> insert into emp values(7499, 'ALLEN', 'SALESMAN',7698,TO_DATE('20-02-1981','dd-mm-yyyy'),1600,300,30 );
+
+1 row created.
+
+SQL> 
+SQL> insert into emp values(7521, 'WARD', 'SALESMAN',7698,TO_DATE('22-02-1981','dd-mm-yyyy'),1250,500,30 );
+
+1 row created.
+
+SQL> 
+SQL> 
+SQL> insert into emp values(7566, 'JONES', 'MANAGER',7839,TO_DATE('02-04-1981','dd-mm-yyyy'),2975,NULL,20 );
+
+1 row created.
+
+SQL> select * from EMP;
+
+       EMP ENAME                JOB                         MGR HIREDATE        
+---------- -------------------- -------------------- ---------- ---------       
+       SAL       COMM     DEPTNO                                                
+---------- ---------- ----------                                                
+      1234 Saurabh                                                              
+                                                                                
+                                                                                
+      7369 Smith                Clerk                      7902 17-DEC-80       
+      7000                    20                                                
+                                                                                
+      7499 ALLEN                SALESMAN                   7698 20-FEB-81       
+      1600        300         30                                                
+                                                                                
+
+       EMP ENAME                JOB                         MGR HIREDATE        
+---------- -------------------- -------------------- ---------- ---------       
+       SAL       COMM     DEPTNO                                                
+---------- ---------- ----------                                                
+      7521 WARD                 SALESMAN                   7698 22-FEB-81       
+      1250        500         30                                                
+                                                                                
+      7566 JONES                MANAGER                    7839 02-APR-81       
+      2975                    20                                                
+                                                                                
+
+SQL> 
+SQL> insert into emp values(7654, 'MARTIN', 'SALESMAN',7698,TO_DATE('02-04-1981','dd-mm-yyyy'),1250,1400,30ÿ);
+insert into emp values(7654, 'MARTIN', 'SALESMAN',7698,TO_DATE('02-04-1981','dd-mm-yyyy'),1250,1400,30ÿ)
+                                                                                                      *
+ERROR at line 1:
+ORA-00917: missing comma 
+
+
+SQL> insert into emp values(7654, 'MARTIN', 'SALESMAN',7698,TO_DATE('02-04-1981','dd-mm-yyyy'),1250,1400,30ÿ);
+insert into emp values(7654, 'MARTIN', 'SALESMAN',7698,TO_DATE('02-04-1981','dd-mm-yyyy'),1250,1400,30ÿ)
+                                                                                                      *
+ERROR at line 1:
+ORA-00917: missing comma 
+
+
+SQL> insert into emp values(7654, 'MARTIN', 'SALESMAN',7698,TO_DATE('28-09-1981','dd-mm-yyyy'),1250,1400,30 );
+
+1 row created.
+
+SQL> insert into emp values(7698,'BLAKE', 'MANAGER',7839,TO_DATE('01-05-1981','dd-mm-yyyy'),2850,NULL,30 );
+
+1 row created.
+
+SQL> insert into emp values(7698,'CLARK', 'MANAGER',7839,TO_DATE('09-07-1981','dd-mm-yyyy'),2450,NULL,10 );
+
+1 row created.
+
+SQL> insert into emp values(7788,'SCOT', 'ANALYST',7566,TO_DATE('19-04-1987','dd-mm-yyyy'),3000,NULL,20 );
+
+1 row created.
+
+SQL> insert into emp values(7839,'KING', 'PRESIDENT',NULL,TO_DATE('17-11-1981','dd-mm-yyyy'),3500,NULL,10 );
+
+1 row created.
+
+SQL> insert into emp values(7844,'TURNER', 'SALESMAN',7698,TO_DATE('08-08-1981','dd-mm-yyyy'),1500,0,30 );
+
+1 row created.
+
+SQL> insert into emp values(7876, 'ADAMS', 'CLERK',7788,TO_DATE('23-05-1987','dd-mm-yyyy'),1100,NULL,20 );
+
+1 row created.
+
+SQL> insert into emp values(7900, 'JAMES', 'CLERK',7968,TO_DATE('3-12-1981','dd-mm-yyyy'),950,NULL,30 );
+
+1 row created.
+
+SQL> insert into emp values(7902, 'FORD', 'ANALYST',7566,TO_DATE('3-12-1981','dd-mm-yyyy'),3000,NULL,20 );
+
+1 row created.
+
+SQL> insert into emp values(7934, 'MILLER', 'CLERK',7782,TO_DATE('23-1-1982','dd-mm-yyyy'),1300,NULL,10 );
+
+1 row created.
+
+SQL> insert into emp values(7994, 'MILLES', 'CLERK',7788,TO_DATE('23-1-1985','dd-mm-yyyy'),1300,1500,10 );
+
+1 row created.
+
+SQL> 
+SQL> insert into emp values(7834, 'GARV', 'SALESMAN',7822,TO_DATE('12-1-1982','dd-mm-yyyy'),1500,NULL,10 );
+
+1 row created.
+
+SQL> insert into emp values(8034, 'MILES', 'MANAGER',7666,TO_DATE('08-08-1982','dd-mm-yyyy'),4300,NULL,10 );
+
+1 row created.
+
+SQL> insert into emp values(8888, 'SAM', 'CLERK',7785,TO_DATE('23-1-1987','dd-mm-yyyy'),3300,NULL,10 );
+
+1 row created.
+
+SQL> select * from EMP
+  2  ;
+
+       EMP ENAME                JOB                         MGR HIREDATE        
+---------- -------------------- -------------------- ---------- ---------       
+       SAL       COMM     DEPTNO                                                
+---------- ---------- ----------                                                
+      1234 Saurabh                                                              
+                                                                                
+                                                                                
+      7369 Smith                Clerk                      7902 17-DEC-80       
+      7000                    20                                                
+                                                                                
+      7499 ALLEN                SALESMAN                   7698 20-FEB-81       
+      1600        300         30                                                
+                                                                                
+
+       EMP ENAME                JOB                         MGR HIREDATE        
+---------- -------------------- -------------------- ---------- ---------       
+       SAL       COMM     DEPTNO                                                
+---------- ---------- ----------                                                
+      7521 WARD                 SALESMAN                   7698 22-FEB-81       
+      1250        500         30                                                
+                                                                                
+      7566 JONES                MANAGER                    7839 02-APR-81       
+      2975                    20                                                
+                                                                                
+      7654 MARTIN               SALESMAN                   7698 28-SEP-81       
+      1250       1400         30                                                
+                                                                                
+
+       EMP ENAME                JOB                         MGR HIREDATE        
+---------- -------------------- -------------------- ---------- ---------       
+       SAL       COMM     DEPTNO                                                
+---------- ---------- ----------                                                
+      7698 BLAKE                MANAGER                    7839 01-MAY-81       
+      2850                    30                                                
+                                                                                
+      7698 CLARK                MANAGER                    7839 09-JUL-81       
+      2450                    10                                                
+                                                                                
+      7788 SCOT                 ANALYST                    7566 19-APR-87       
+      3000                    20                                                
+                                                                                
+
+       EMP ENAME                JOB                         MGR HIREDATE        
+---------- -------------------- -------------------- ---------- ---------       
+       SAL       COMM     DEPTNO                                                
+---------- ---------- ----------                                                
+      7839 KING                 PRESIDENT                       17-NOV-81       
+      3500                    10                                                
+                                                                                
+      7844 TURNER               SALESMAN                   7698 08-AUG-81       
+      1500          0         30                                                
+                                                                                
+      7876 ADAMS                CLERK                      7788 23-MAY-87       
+      1100                    20                                                
+                                                                                
+
+       EMP ENAME                JOB                         MGR HIREDATE        
+---------- -------------------- -------------------- ---------- ---------       
+       SAL       COMM     DEPTNO                                                
+---------- ---------- ----------                                                
+      7900 JAMES                CLERK                      7968 03-DEC-81       
+       950                    30                                                
+                                                                                
+      7902 FORD                 ANALYST                    7566 03-DEC-81       
+      3000                    20                                                
+                                                                                
+      7934 MILLER               CLERK                      7782 23-JAN-82       
+      1300                    10                                                
+                                                                                
+
+       EMP ENAME                JOB                         MGR HIREDATE        
+---------- -------------------- -------------------- ---------- ---------       
+       SAL       COMM     DEPTNO                                                
+---------- ---------- ----------                                                
+      7994 MILLES               CLERK                      7788 23-JAN-85       
+      1300       1500         10                                                
+                                                                                
+      7834 GARV                 SALESMAN                   7822 12-JAN-82       
+      1500                    10                                                
+                                                                                
+      8034 MILES                MANAGER                    7666 08-AUG-82       
+      4300                    10                                                
+                                                                                
+
+       EMP ENAME                JOB                         MGR HIREDATE        
+---------- -------------------- -------------------- ---------- ---------       
+       SAL       COMM     DEPTNO                                                
+---------- ---------- ----------                                                
+      8888 SAM                  CLERK                      7785 23-JAN-87       
+      3300                    10                                                
+                                                                                
+
+19 rows selected.
+
+SQL> COMMIT
+  2  ;
+
+Commit complete.
+
+SQL> CREATE TABLE dept(deptno NUMBER(6),Dname VARCHAR2(20),Loc VARCHAR2(20));
+
+Table created.
+
+SQL> 
+SQL> Table created.
+SP2-0734: unknown command beginning "Table crea..." - rest of line ignored.
+SQL> CREATE TABLE dept(deptno NUMBER(6),Dname VARCHAR2(20),Loc VARCHAR2(20));
+CREATE TABLE dept(deptno NUMBER(6),Dname VARCHAR2(20),Loc VARCHAR2(20))
+             *
+ERROR at line 1:
+ORA-00955: name is already used by an existing object 
+
+
+SQL> DESC DEPT;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ DEPTNO                                             NUMBER(6)
+ DNAME                                              VARCHAR2(20)
+ LOC                                                VARCHAR2(20)
+
+SQL> INSERT INTO dept VALUES(60,'HR','MUMBAI');
+
+1 row created.
+
+SQL> INSERT INTO dept VALUES(10,'ACCOUNTING','NEW YORK');
+
+1 row created.
+
+SQL> INSERT INTO dept VALUES(20,'RESEARCH','DALLAS');
+
+1 row created.
+
+SQL> INSERT INTO dept VALUES(30,'SALES','CHICAGO');
+
+1 row created.
+
+SQL>  INSERT INTO dept VALUES(40,'OPERATIONS','BOSTON');
+
+1 row created.
+
+SQL>  INSERT INTO dept VALUES(50,'IT','NAGPUR');
+
+1 row created.
+
+SQL> INSERT INTO dept VALUES(70,'AQUISITIONS','DELHI');
+
+1 row created.
+
+SQL>  INSERT INTO dept VALUES(80,'MERGERS','PUNE');
+
+1 row created.
+
+SQL> INSERT INTO dept VALUES(80,'MANAGEMENT','HYDERABAD');
+
+1 row created.
+
+SQL> INSERT INTO dept VALUES(100,'INVESTMENTS','KOLKATA');
+
+1 row created.
+
+SQL> COMMIT
+  2  ;
+
+Commit complete.
+
+SQL> select * DEPT;
+select * DEPT
+         *
+ERROR at line 1:
+ORA-00923: FROM keyword not found where expected 
+
+
+SQL> select * from DEPT;
+
+    DEPTNO DNAME                LOC                                             
+---------- -------------------- --------------------                            
+        60 HR                   MUMBAI                                          
+        10 ACCOUNTING           NEW YORK                                        
+        20 RESEARCH             DALLAS                                          
+        30 SALES                CHICAGO                                         
+        40 OPERATIONS           BOSTON                                          
+        50 IT                   NAGPUR                                          
+        70 AQUISITIONS          DELHI                                           
+        80 MERGERS              PUNE                                            
+        80 MANAGEMENT           HYDERABAD                                       
+       100 INVESTMENTS          KOLKATA                                         
+
+10 rows selected.
+
+SQL> select * from EMP;
+
+       EMP ENAME                JOB                         MGR HIREDATE        
+---------- -------------------- -------------------- ---------- ---------       
+       SAL       COMM     DEPTNO                                                
+---------- ---------- ----------                                                
+      1234 Saurabh                                                              
+                                                                                
+                                                                                
+      7369 Smith                Clerk                      7902 17-DEC-80       
+      7000                    20                                                
+                                                                                
+      7499 ALLEN                SALESMAN                   7698 20-FEB-81       
+      1600        300         30                                                
+                                                                                
+
+       EMP ENAME                JOB                         MGR HIREDATE        
+---------- -------------------- -------------------- ---------- ---------       
+       SAL       COMM     DEPTNO                                                
+---------- ---------- ----------                                                
+      7521 WARD                 SALESMAN                   7698 22-FEB-81       
+      1250        500         30                                                
+                                                                                
+      7566 JONES                MANAGER                    7839 02-APR-81       
+      2975                    20                                                
+                                                                                
+      7654 MARTIN               SALESMAN                   7698 28-SEP-81       
+      1250       1400         30                                                
+                                                                                
+
+       EMP ENAME                JOB                         MGR HIREDATE        
+---------- -------------------- -------------------- ---------- ---------       
+       SAL       COMM     DEPTNO                                                
+---------- ---------- ----------                                                
+      7698 BLAKE                MANAGER                    7839 01-MAY-81       
+      2850                    30                                                
+                                                                                
+      7698 CLARK                MANAGER                    7839 09-JUL-81       
+      2450                    10                                                
+                                                                                
+      7788 SCOT                 ANALYST                    7566 19-APR-87       
+      3000                    20                                                
+                                                                                
+
+       EMP ENAME                JOB                         MGR HIREDATE        
+---------- -------------------- -------------------- ---------- ---------       
+       SAL       COMM     DEPTNO                                                
+---------- ---------- ----------                                                
+      7839 KING                 PRESIDENT                       17-NOV-81       
+      3500                    10                                                
+                                                                                
+      7844 TURNER               SALESMAN                   7698 08-AUG-81       
+      1500          0         30                                                
+                                                                                
+      7876 ADAMS                CLERK                      7788 23-MAY-87       
+      1100                    20                                                
+                                                                                
+
+       EMP ENAME                JOB                         MGR HIREDATE        
+---------- -------------------- -------------------- ---------- ---------       
+       SAL       COMM     DEPTNO                                                
+---------- ---------- ----------                                                
+      7900 JAMES                CLERK                      7968 03-DEC-81       
+       950                    30                                                
+                                                                                
+      7902 FORD                 ANALYST                    7566 03-DEC-81       
+      3000                    20                                                
+                                                                                
+      7934 MILLER               CLERK                      7782 23-JAN-82       
+      1300                    10                                                
+                                                                                
+
+       EMP ENAME                JOB                         MGR HIREDATE        
+---------- -------------------- -------------------- ---------- ---------       
+       SAL       COMM     DEPTNO                                                
+---------- ---------- ----------                                                
+      7994 MILLES               CLERK                      7788 23-JAN-85       
+      1300       1500         10                                                
+                                                                                
+      7834 GARV                 SALESMAN                   7822 12-JAN-82       
+      1500                    10                                                
+                                                                                
+      8034 MILES                MANAGER                    7666 08-AUG-82       
+      4300                    10                                                
+                                                                                
+
+       EMP ENAME                JOB                         MGR HIREDATE        
+---------- -------------------- -------------------- ---------- ---------       
+       SAL       COMM     DEPTNO                                                
+---------- ---------- ----------                                                
+      8888 SAM                  CLERK                      7785 23-JAN-87       
+      3300                    10                                                
+                                                                                
+
+19 rows selected.
+
+SQL> set linesize 600
+SQL> select * from EMP;
+
+       EMP ENAME                JOB                         MGR HIREDATE         SAL       COMM     DEPTNO                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+---------- -------------------- -------------------- ---------- --------- ---------- ---------- ----------                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+      1234 Saurabh                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
+      7369 Smith                Clerk                      7902 17-DEC-80       7000                    20                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+      7499 ALLEN                SALESMAN                   7698 20-FEB-81       1600        300         30                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+      7521 WARD                 SALESMAN                   7698 22-FEB-81       1250        500         30                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+      7566 JONES                MANAGER                    7839 02-APR-81       2975                    20                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+      7654 MARTIN               SALESMAN                   7698 28-SEP-81       1250       1400         30                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+      7698 BLAKE                MANAGER                    7839 01-MAY-81       2850                    30                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+      7698 CLARK                MANAGER                    7839 09-JUL-81       2450                    10                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+      7788 SCOT                 ANALYST                    7566 19-APR-87       3000                    20                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+      7839 KING                 PRESIDENT                       17-NOV-81       3500                    10                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+      7844 TURNER               SALESMAN                   7698 08-AUG-81       1500          0         30                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+
+       EMP ENAME                JOB                         MGR HIREDATE         SAL       COMM     DEPTNO                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+---------- -------------------- -------------------- ---------- --------- ---------- ---------- ----------                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+      7876 ADAMS                CLERK                      7788 23-MAY-87       1100                    20                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+      7900 JAMES                CLERK                      7968 03-DEC-81        950                    30                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+      7902 FORD                 ANALYST                    7566 03-DEC-81       3000                    20                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+      7934 MILLER               CLERK                      7782 23-JAN-82       1300                    10                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+      7994 MILLES               CLERK                      7788 23-JAN-85       1300       1500         10                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+      7834 GARV                 SALESMAN                   7822 12-JAN-82       1500                    10                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+      8034 MILES                MANAGER                    7666 08-AUG-82       4300                    10                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+      8888 SAM                  CLERK                      7785 23-JAN-87       3300                    10                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+
+19 rows selected.
+
+SQL> insert into emp values(8868, 'WILLIAM', 'ANALYST',7885,TO_DATE('23-10-1987','dd-mm-yyyy'),3300,1000,10 );
+
+1 row created.
+
+SQL> select * from EMP;
+
+       EMP ENAME                JOB                         MGR HIREDATE         SAL       COMM     DEPTNO                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+---------- -------------------- -------------------- ---------- --------- ---------- ---------- ----------                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+      1234 Saurabh                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
+      7369 Smith                Clerk                      7902 17-DEC-80       7000                    20                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+      7499 ALLEN                SALESMAN                   7698 20-FEB-81       1600        300         30                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+      7521 WARD                 SALESMAN                   7698 22-FEB-81       1250        500         30                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+      7566 JONES                MANAGER                    7839 02-APR-81       2975                    20                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+      7654 MARTIN               SALESMAN                   7698 28-SEP-81       1250       1400         30                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+      7698 BLAKE                MANAGER                    7839 01-MAY-81       2850                    30                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+      7698 CLARK                MANAGER                    7839 09-JUL-81       2450                    10                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+      7788 SCOT                 ANALYST                    7566 19-APR-87       3000                    20                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+      7839 KING                 PRESIDENT                       17-NOV-81       3500                    10                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+      7844 TURNER               SALESMAN                   7698 08-AUG-81       1500          0         30                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+
+       EMP ENAME                JOB                         MGR HIREDATE         SAL       COMM     DEPTNO                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+---------- -------------------- -------------------- ---------- --------- ---------- ---------- ----------                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+      7876 ADAMS                CLERK                      7788 23-MAY-87       1100                    20                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+      7900 JAMES                CLERK                      7968 03-DEC-81        950                    30                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+      7902 FORD                 ANALYST                    7566 03-DEC-81       3000                    20                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+      7934 MILLER               CLERK                      7782 23-JAN-82       1300                    10                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+      7994 MILLES               CLERK                      7788 23-JAN-85       1300       1500         10                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+      7834 GARV                 SALESMAN                   7822 12-JAN-82       1500                    10                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+      8034 MILES                MANAGER                    7666 08-AUG-82       4300                    10                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+      8888 SAM                  CLERK                      7785 23-JAN-87       3300                    10                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+      8868 WILLIAM              ANALYST                    7885 23-OCT-87       3300       1000         10                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+
+20 rows selected.
+
+SQL> COMMIT
+  2  ;
+
+Commit complete.
+
+SQL> select * from DEPT;
+
+    DEPTNO DNAME                LOC                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+---------- -------------------- --------------------                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
+        60 HR                   MUMBAI                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
+        10 ACCOUNTING           NEW YORK                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
+        20 RESEARCH             DALLAS                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
+        30 SALES                CHICAGO                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
+        40 OPERATIONS           BOSTON                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
+        50 IT                   NAGPUR                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
+        70 AQUISITIONS          DELHI                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
+        80 MERGERS              PUNE                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
+        80 MANAGEMENT           HYDERABAD                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+       100 INVESTMENTS          KOLKATA                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
+
+10 rows selected.
+
+SQL> COMMIT;
+
+Commit complete.
+
+SQL> spool out;

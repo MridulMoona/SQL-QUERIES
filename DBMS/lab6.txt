@@ -1,0 +1,1266 @@
+SQL> show user
+USER is "MRIDUL"
+SQL> select CUUREMT_TIMESTAMP FROM DUAL;
+select CUUREMT_TIMESTAMP FROM DUAL
+       *
+ERROR at line 1:
+ORA-00904: "CUUREMT_TIMESTAMP": invalid identifier 
+
+
+SQL> select CUREMT_TIMESTAMP FROM DUAL;
+select CUREMT_TIMESTAMP FROM DUAL
+       *
+ERROR at line 1:
+ORA-00904: "CUREMT_TIMESTAMP": invalid identifier 
+
+
+SQL> select CURENT_TIMESTAMP FROM DUAL;
+select CURENT_TIMESTAMP FROM DUAL
+       *
+ERROR at line 1:
+ORA-00904: "CURENT_TIMESTAMP": invalid identifier 
+
+
+SQL> select CURRENT_TIMESTAMP FROM DUAL;
+
+CURRENT_TIMESTAMP                                                               
+---------------------------------------------------------------------------     
+20-MAR-24 03.07.32.385000 PM +05:30                                             
+
+SQL> SELECT * FROM EMP;
+SELECT * FROM EMP
+              *
+ERROR at line 1:
+ORA-00942: table or view does not exist 
+
+
+SQL> SELECT * FROM emp;
+SELECT * FROM emp
+              *
+ERROR at line 1:
+ORA-00942: table or view does not exist 
+
+
+SQL> select * from tab;
+
+no rows selected
+
+SQL> SQL> select CURRENT_TIMESTAMP FROM DUAL
+SP2-0734: unknown command beginning "SQL> selec..." - rest of line ignored.
+SQL>   2  ;
+SP2-0226: Invalid line number 
+SQL> 
+SQL> CURRENT_TIMESTAMP
+SP2-0734: unknown command beginning "CURRENT_TI..." - rest of line ignored.
+SQL> ---------------------------------------------------------------------------
+SQL> 31-JAN-24 02.23.38.138000 PM +05:30
+SP2-0734: unknown command beginning "31-JAN-24 ..." - rest of line ignored.
+SQL> 
+SQL> SQL> SHOW USER
+SP2-0734: unknown command beginning "SQL> SHOW ..." - rest of line ignored.
+SQL> USER is "MRIDUL"
+SP2-0734: unknown command beginning "USER is "M..." - rest of line ignored.
+SQL> SQL>
+SP2-0042: unknown command "SQL>" - rest of line ignored.
+SP2-0044: For a list of known commands enter HELP
+and to leave enter EXIT.
+SQL> SQL> DESC EMP
+SP2-0734: unknown command beginning "SQL> DESC ..." - rest of line ignored.
+SQL>  Name                                      Null?    Type
+SP2-0734: unknown command beginning "Name      ..." - rest of line ignored.
+SQL>  ----------------------------------------- -------- ----------------------------
+SQL>  EMP                                                NUMBER(4)
+SP2-0734: unknown command beginning "EMP       ..." - rest of line ignored.
+SQL>  ENAME                                              VARCHAR2(20)
+SP2-0734: unknown command beginning "ENAME     ..." - rest of line ignored.
+SQL>  JOB                                                VARCHAR2(20)
+SP2-0734: unknown command beginning "JOB       ..." - rest of line ignored.
+SQL>  MGR                                                NUMBER(4)
+SP2-0734: unknown command beginning "MGR       ..." - rest of line ignored.
+SP2-0044: For a list of known commands enter HELP
+and to leave enter EXIT.
+SQL>  HIREDATE                                           DATE
+SP2-0734: unknown command beginning "HIREDATE  ..." - rest of line ignored.
+SQL>  SAL                                                NUMBER(5)
+SP2-0734: unknown command beginning "SAL       ..." - rest of line ignored.
+SQL>  COMM                                               NUMBER(4)
+SP2-0734: unknown command beginning "COMM      ..." - rest of line ignored.
+SQL>  DEPTNO                                             NUMBER(2)
+SP2-0734: unknown command beginning "DEPTNO    ..." - rest of line ignored.
+SP2-0044: For a list of known commands enter HELP
+and to leave enter EXIT.
+SQL> 
+SQL> SQL> SELECT * FROM EMP
+SP2-0734: unknown command beginning "SQL> SELEC..." - rest of line ignored.
+SQL>   2  ;
+SP2-0226: Invalid line number 
+SQL> 
+SQL> no rows selected
+SP2-0734: unknown command beginning "no rows se..." - rest of line ignored.
+SQL> 
+SQL> SQL> select * from EMP
+SP2-0734: unknown command beginning "SQL> selec..." - rest of line ignored.
+SQL>   2  ;
+SP2-0226: Invalid line number 
+SQL> 
+SQL> no rows selected
+SP2-0734: unknown command beginning "no rows se..." - rest of line ignored.
+SP2-0044: For a list of known commands enter HELP
+and to leave enter EXIT.
+SQL> 
+SQL> SQL> insert into emp values(1234, 'Saurabh', NULL, NULL, NULL, NULL, NULL, NULL)
+SP2-0734: unknown command beginning "SQL> inser..." - rest of line ignored.
+SQL>   2  ;
+SP2-0226: Invalid line number 
+SQL> 
+SQL> 1 row created.
+SQL> 
+SQL> SQL> INSERT INTO emp VALUES(7369,'Smith','Clerk',7902,'17-DEC-80',7000,NULL,20);
+SP2-0734: unknown command beginning "SQL> INSER..." - rest of line ignored.
+SQL> 
+SQL> 1 row created.
+SQL> 
+SQL> SQL> select * from EMP;
+SP2-0734: unknown command beginning "SQL> selec..." - rest of line ignored.
+SQL> 
+SQL>        EMP ENAME                JOB                         MGR HIREDATE
+SP2-0734: unknown command beginning "EMP ENAME ..." - rest of line ignored.
+SP2-0044: For a list of known commands enter HELP
+and to leave enter EXIT.
+SQL> ---------- -------------------- -------------------- ---------- ---------
+SQL>        SAL       COMM     DEPTNO
+SP2-0734: unknown command beginning "SAL       ..." - rest of line ignored.
+SQL> ---------- ---------- ----------
+SQL>       1234 Saurabh
+SQL> 
+SQL> 
+SQL>       7369 Smith                Clerk                      7902 17-DEC-80
+SQL>       7000                    20
+SQL> 
+SQL> 
+SQL> SQL> insert into emp values(7499, 'ALLEN', 'SALESMAN',7698,TO_DATE('20-02-1981','dd-mm-yyyy'),1600,300,30 );
+SP2-0734: unknown command beginning "SQL> inser..." - rest of line ignored.
+SQL> 
+SQL> 1 row created.
+SQL> 
+SQL> SQL>
+SP2-0042: unknown command "SQL>" - rest of line ignored.
+SQL> SQL> insert into emp values(7521, 'WARD', 'SALESMAN',7698,TO_DATE('22-02-1981','dd-mm-yyyy'),1250,500,30 );
+SP2-0734: unknown command beginning "SQL> inser..." - rest of line ignored.
+SQL> 
+SQL> 1 row created.
+SQL> 
+SQL> SQL>
+SP2-0042: unknown command "SQL>" - rest of line ignored.
+SP2-0044: For a list of known commands enter HELP
+and to leave enter EXIT.
+SQL> SQL>
+SP2-0042: unknown command "SQL>" - rest of line ignored.
+SQL> SQL> insert into emp values(7566, 'JONES', 'MANAGER',7839,TO_DATE('02-04-1981','dd-mm-yyyy'),2975,NULL,20 );
+SP2-0734: unknown command beginning "SQL> inser..." - rest of line ignored.
+SQL> 
+SQL> 1 row created.
+SQL> 
+SQL> SQL> select * from EMP;
+SP2-0734: unknown command beginning "SQL> selec..." - rest of line ignored.
+SQL> 
+SQL>        EMP ENAME                JOB                         MGR HIREDATE
+SP2-0734: unknown command beginning "EMP ENAME ..." - rest of line ignored.
+SP2-0044: For a list of known commands enter HELP
+and to leave enter EXIT.
+SQL> ---------- -------------------- -------------------- ---------- ---------
+SQL>        SAL       COMM     DEPTNO
+SP2-0734: unknown command beginning "SAL       ..." - rest of line ignored.
+SQL> ---------- ---------- ----------
+SQL>       1234 Saurabh
+SQL> 
+SQL> 
+SQL>       7369 Smith                Clerk                      7902 17-DEC-80
+SQL>       7000                    20
+SQL> 
+SQL>       7499 ALLEN                SALESMAN                   7698 20-FEB-81
+SQL>       1600        300         30
+SQL> 
+SQL> 
+SQL>        EMP ENAME                JOB                         MGR HIREDATE
+SP2-0734: unknown command beginning "EMP ENAME ..." - rest of line ignored.
+SQL> ---------- -------------------- -------------------- ---------- ---------
+SQL>        SAL       COMM     DEPTNO
+SP2-0734: unknown command beginning "SAL       ..." - rest of line ignored.
+SQL> ---------- ---------- ----------
+SQL>       7521 WARD                 SALESMAN                   7698 22-FEB-81
+SQL>       1250        500         30
+SQL> 
+SQL>       7566 JONES                MANAGER                    7839 02-APR-81
+SQL>       2975                    20
+SQL> 
+SQL> 
+SQL> SQL>
+SP2-0042: unknown command "SQL>" - rest of line ignored.
+SQL> SQL> insert into emp values(7654, 'MARTIN', 'SALESMAN',7698,TO_DATE('02-04-1981','dd-mm-yyyy'),1250,1400,30 );
+SP2-0734: unknown command beginning "SQL> inser..." - rest of line ignored.
+SQL> insert into emp values(7654, 'MARTIN', 'SALESMAN',7698,TO_DATE('02-04-1981','dd-mm-yyyy'),1250,1400,30 )
+  2                                                                                                        *
+  3  ERROR at line 1:
+  4  ORA-00917: missing comma
+  5  
+SQL> 
+SQL> SQL> insert into emp values(7654, 'MARTIN', 'SALESMAN',7698,TO_DATE('02-04-1981','dd-mm-yyyy'),1250,1400,30 );
+SP2-0734: unknown command beginning "SQL> inser..." - rest of line ignored.
+SQL> insert into emp values(7654, 'MARTIN', 'SALESMAN',7698,TO_DATE('02-04-1981','dd-mm-yyyy'),1250,1400,30 )
+  2                                                                                                        *
+  3  ERROR at line 1:
+  4  ORA-00917: missing comma
+  5  
+SQL> 
+SQL> SQL> insert into emp values(7654, 'MARTIN', 'SALESMAN',7698,TO_DATE('28-09-1981','dd-mm-yyyy'),1250,1400,30 );
+SP2-0734: unknown command beginning "SQL> inser..." - rest of line ignored.
+SQL> 
+SQL> 1 row created.
+SQL> 
+SQL> SQL> insert into emp values(7698,'BLAKE', 'MANAGER',7839,TO_DATE('01-05-1981','dd-mm-yyyy'),2850,NULL,30 );
+SP2-0734: unknown command beginning "SQL> inser..." - rest of line ignored.
+SQL> 
+SQL> 1 row created.
+SQL> 
+SQL> SQL> insert into emp values(7698,'CLARK', 'MANAGER',7839,TO_DATE('09-07-1981','dd-mm-yyyy'),2450,NULL,10 );
+SP2-0734: unknown command beginning "SQL> inser..." - rest of line ignored.
+SQL> 
+SQL> 1 row created.
+SQL> 
+SQL> SQL> insert into emp values(7788,'SCOT', 'ANALYST',7566,TO_DATE('19-04-1987','dd-mm-yyyy'),3000,NULL,20 );
+SP2-0734: unknown command beginning "SQL> inser..." - rest of line ignored.
+SP2-0044: For a list of known commands enter HELP
+and to leave enter EXIT.
+SQL> 
+SQL> 1 row created.
+SQL> 
+SQL> SQL> insert into emp values(7839,'KING', 'PRESIDENT',NULL,TO_DATE('17-11-1981','dd-mm-yyyy'),3500,NULL,10 );
+SP2-0734: unknown command beginning "SQL> inser..." - rest of line ignored.
+SQL> 
+SQL> 1 row created.
+SQL> 
+SQL> SQL> insert into emp values(7844,'TURNER', 'SALESMAN',7698,TO_DATE('08-08-1981','dd-mm-yyyy'),1500,0,30 );
+SP2-0734: unknown command beginning "SQL> inser..." - rest of line ignored.
+SQL> 
+SQL> 1 row created.
+SQL> 
+SQL> SQL> insert into emp values(7876, 'ADAMS', 'CLERK',7788,TO_DATE('23-05-1987','dd-mm-yyyy'),1100,NULL,20 );
+SP2-0734: unknown command beginning "SQL> inser..." - rest of line ignored.
+SQL> 
+SQL> 1 row created.
+SQL> 
+SQL> SQL> insert into emp values(7900, 'JAMES', 'CLERK',7968,TO_DATE('3-12-1981','dd-mm-yyyy'),950,NULL,30 );
+SP2-0734: unknown command beginning "SQL> inser..." - rest of line ignored.
+SP2-0044: For a list of known commands enter HELP
+and to leave enter EXIT.
+SQL> 
+SQL> 1 row created.
+SQL> 
+SQL> SQL> insert into emp values(7902, 'FORD', 'ANALYST',7566,TO_DATE('3-12-1981','dd-mm-yyyy'),3000,NULL,20 );
+SP2-0734: unknown command beginning "SQL> inser..." - rest of line ignored.
+SQL> 
+SQL> 1 row created.
+SQL> 
+SQL> SQL> insert into emp values(7934, 'MILLER', 'CLERK',7782,TO_DATE('23-1-1982','dd-mm-yyyy'),1300,NULL,10 );
+SP2-0734: unknown command beginning "SQL> inser..." - rest of line ignored.
+SQL> 
+SQL> 1 row created.
+SQL> 
+SQL> SQL> insert into emp values(7994, 'MILLES', 'CLERK',7788,TO_DATE('23-1-1985','dd-mm-yyyy'),1300,1500,10 );
+SP2-0734: unknown command beginning "SQL> inser..." - rest of line ignored.
+SQL> 
+SQL> 1 row created.
+SQL> 
+SQL> SQL>
+SP2-0042: unknown command "SQL>" - rest of line ignored.
+SP2-0044: For a list of known commands enter HELP
+and to leave enter EXIT.
+SQL> SQL> insert into emp values(7834, 'GARV', 'SALESMAN',7822,TO_DATE('12-1-1982','dd-mm-yyyy'),1500,NULL,10 );
+SP2-0734: unknown command beginning "SQL> inser..." - rest of line ignored.
+SQL> 
+SQL> 1 row created.
+SQL> 
+SQL> SQL> insert into emp values(8034, 'MILES', 'MANAGER',7666,TO_DATE('08-08-1982','dd-mm-yyyy'),4300,NULL,10 );
+SP2-0734: unknown command beginning "SQL> inser..." - rest of line ignored.
+SQL> 
+SQL> 1 row created.
+SQL> 
+SQL> SQL> insert into emp values(8888, 'SAM', 'CLERK',7785,TO_DATE('23-1-1987','dd-mm-yyyy'),3300,NULL,10 );
+SP2-0734: unknown command beginning "SQL> inser..." - rest of line ignored.
+SQL> 
+SQL> 1 row created.
+SQL> 
+SQL> SQL> select * from EMP
+SP2-0734: unknown command beginning "SQL> selec..." - rest of line ignored.
+SP2-0044: For a list of known commands enter HELP
+and to leave enter EXIT.
+SQL>   2  ;
+  2*                                                                                                       *
+SQL> 
+SQL>        EMP ENAME                JOB                         MGR HIREDATE
+SP2-0734: unknown command beginning "EMP ENAME ..." - rest of line ignored.
+SQL> ---------- -------------------- -------------------- ---------- ---------
+SQL>        SAL       COMM     DEPTNO
+SP2-0734: unknown command beginning "SAL       ..." - rest of line ignored.
+SQL> ---------- ---------- ----------
+SQL>       1234 Saurabh
+SQL> 
+SQL> 
+SQL>       7369 Smith                Clerk                      7902 17-DEC-80
+SQL>       7000                    20
+SQL> 
+SQL>       7499 ALLEN                SALESMAN                   7698 20-FEB-81
+SQL>       1600        300         30
+SQL> 
+SQL> 
+SQL>        EMP ENAME                JOB                         MGR HIREDATE
+SP2-0734: unknown command beginning "EMP ENAME ..." - rest of line ignored.
+SQL> ---------- -------------------- -------------------- ---------- ---------
+SQL>        SAL       COMM     DEPTNO
+SP2-0734: unknown command beginning "SAL       ..." - rest of line ignored.
+SQL> ---------- ---------- ----------
+SQL>       7521 WARD                 SALESMAN                   7698 22-FEB-81
+SQL>       1250        500         30
+SQL> 
+SQL>       7566 JONES                MANAGER                    7839 02-APR-81
+SQL>       2975                    20
+SQL> 
+SQL>       7654 MARTIN               SALESMAN                   7698 28-SEP-81
+SQL>       1250       1400         30
+SQL> 
+SQL> 
+SQL>        EMP ENAME                JOB                         MGR HIREDATE
+SP2-0734: unknown command beginning "EMP ENAME ..." - rest of line ignored.
+SQL> ---------- -------------------- -------------------- ---------- ---------
+SQL>        SAL       COMM     DEPTNO
+SP2-0734: unknown command beginning "SAL       ..." - rest of line ignored.
+SQL> ---------- ---------- ----------
+SQL>       7698 BLAKE                MANAGER                    7839 01-MAY-81
+SQL>       2850                    30
+SQL> 
+SQL>       7698 CLARK                MANAGER                    7839 09-JUL-81
+SQL>       2450                    10
+SQL> 
+SQL>       7788 SCOT                 ANALYST                    7566 19-APR-87
+SQL>       3000                    20
+SQL> 
+SQL> 
+SQL>        EMP ENAME                JOB                         MGR HIREDATE
+SP2-0734: unknown command beginning "EMP ENAME ..." - rest of line ignored.
+SQL> ---------- -------------------- -------------------- ---------- ---------
+SQL>        SAL       COMM     DEPTNO
+SP2-0734: unknown command beginning "SAL       ..." - rest of line ignored.
+SQL> ---------- ---------- ----------
+SQL>       7839 KING                 PRESIDENT                       17-NOV-81
+SQL>       3500                    10
+SQL> 
+SQL>       7844 TURNER               SALESMAN                   7698 08-AUG-81
+SQL>       1500          0         30
+SQL> 
+SQL>       7876 ADAMS                CLERK                      7788 23-MAY-87
+SQL>       1100                    20
+SQL> 
+SQL> 
+SQL>        EMP ENAME                JOB                         MGR HIREDATE
+SP2-0734: unknown command beginning "EMP ENAME ..." - rest of line ignored.
+SQL> ---------- -------------------- -------------------- ---------- ---------
+SQL>        SAL       COMM     DEPTNO
+SP2-0734: unknown command beginning "SAL       ..." - rest of line ignored.
+SQL> ---------- ---------- ----------
+SQL>       7900 JAMES                CLERK                      7968 03-DEC-81
+SQL>        950                    30
+SQL> 
+SQL>       7902 FORD                 ANALYST                    7566 03-DEC-81
+SQL>       3000                    20
+SQL> 
+SQL>       7934 MILLER               CLERK                      7782 23-JAN-82
+SQL>       1300                    10
+SQL> 
+SQL> 
+SQL>        EMP ENAME                JOB                         MGR HIREDATE
+SP2-0734: unknown command beginning "EMP ENAME ..." - rest of line ignored.
+SQL> ---------- -------------------- -------------------- ---------- ---------
+SQL>        SAL       COMM     DEPTNO
+SP2-0734: unknown command beginning "SAL       ..." - rest of line ignored.
+SQL> ---------- ---------- ----------
+SQL>       7994 MILLES               CLERK                      7788 23-JAN-85
+SQL>       1300       1500         10
+SQL> 
+SQL>       7834 GARV                 SALESMAN                   7822 12-JAN-82
+SQL>       1500                    10
+SQL> 
+SQL>       8034 MILES                MANAGER                    7666 08-AUG-82
+SQL>       4300                    10
+SQL> 
+SQL> 
+SQL>        EMP ENAME                JOB                         MGR HIREDATE
+SP2-0734: unknown command beginning "EMP ENAME ..." - rest of line ignored.
+SQL> ---------- -------------------- -------------------- ---------- ---------
+SQL>        SAL       COMM     DEPTNO
+SP2-0734: unknown command beginning "SAL       ..." - rest of line ignored.
+SQL> ---------- ---------- ----------
+SQL>       8888 SAM                  CLERK                      7785 23-JAN-87
+SQL>       3300                    10
+SQL> 
+SQL> 
+SQL> 19 rows selected.
+SQL> 
+SQL> SQL> COMMIT
+SP2-0734: unknown command beginning "SQL> COMMI..." - rest of line ignored.
+SQL>   2  ;
+  2*                                                                                                       *
+SQL> 
+SQL> Commit complete.
+  2  
+SQL> SQL> CREATE TABLE dept(deptno NUMBER(6),Dname VARCHAR2(20),Loc VARCHAR2(20));
+SP2-0734: unknown command beginning "SQL> CREAT..." - rest of line ignored.
+SQL> 
+SQL> Table created.
+SP2-0734: unknown command beginning "Table crea..." - rest of line ignored.
+SQL> 
+SQL> SQL>
+SP2-0042: unknown command "SQL>" - rest of line ignored.
+SQL> SQL> Table created.
+SP2-0734: unknown command beginning "SQL> Table..." - rest of line ignored.
+SP2-0044: For a list of known commands enter HELP
+and to leave enter EXIT.
+SQL> SP2-0734: unknown command beginning "Table crea..." - rest of line ignored.
+SP2-0734: unknown command beginning "SP2-0734: ..." - rest of line ignored.
+SQL> SQL> CREATE TABLE dept(deptno NUMBER(6),Dname VARCHAR2(20),Loc VARCHAR2(20));
+SP2-0734: unknown command beginning "SQL> CREAT..." - rest of line ignored.
+SQL> CREATE TABLE dept(deptno NUMBER(6),Dname VARCHAR2(20),Loc VARCHAR2(20))
+  2               *
+  3  ERROR at line 1:
+  4  ORA-00955: name is already used by an existing object
+  5  
+SQL> 
+SQL> SQL> DESC DEPT;
+SP2-0734: unknown command beginning "SQL> DESC ..." - rest of line ignored.
+SQL>  Name                                      Null?    Type
+SP2-0734: unknown command beginning "Name      ..." - rest of line ignored.
+SQL>  ----------------------------------------- -------- ----------------------------
+SQL>  DEPTNO                                             NUMBER(6)
+SP2-0734: unknown command beginning "DEPTNO    ..." - rest of line ignored.
+SQL>  DNAME                                              VARCHAR2(20)
+SP2-0734: unknown command beginning "DNAME     ..." - rest of line ignored.
+SQL>  LOC                                                VARCHAR2(20)
+SP2-0734: unknown command beginning "LOC       ..." - rest of line ignored.
+SQL> 
+SQL> SQL> INSERT INTO dept VALUES(60,'HR','MUMBAI');
+SP2-0734: unknown command beginning "SQL> INSER..." - rest of line ignored.
+SP2-0044: For a list of known commands enter HELP
+and to leave enter EXIT.
+SQL> 
+SQL> 1 row created.
+SQL> 
+SQL> SQL> INSERT INTO dept VALUES(10,'ACCOUNTING','NEW YORK');
+SP2-0734: unknown command beginning "SQL> INSER..." - rest of line ignored.
+SQL> 
+SQL> 1 row created.
+SQL> 
+SQL> SQL> INSERT INTO dept VALUES(20,'RESEARCH','DALLAS');
+SP2-0734: unknown command beginning "SQL> INSER..." - rest of line ignored.
+SQL> 
+SQL> 1 row created.
+SQL> 
+SQL> SQL> INSERT INTO dept VALUES(30,'SALES','CHICAGO');
+SP2-0734: unknown command beginning "SQL> INSER..." - rest of line ignored.
+SQL> 
+SQL> 1 row created.
+SQL> 
+SQL> SQL>  INSERT INTO dept VALUES(40,'OPERATIONS','BOSTON');
+SP2-0734: unknown command beginning "SQL>  INSE..." - rest of line ignored.
+SP2-0044: For a list of known commands enter HELP
+and to leave enter EXIT.
+SQL> 
+SQL> 1 row created.
+SQL> 
+SQL> SQL>  INSERT INTO dept VALUES(50,'IT','NAGPUR');
+SP2-0734: unknown command beginning "SQL>  INSE..." - rest of line ignored.
+SQL> 
+SQL> 1 row created.
+SQL> 
+SQL> SQL> INSERT INTO dept VALUES(70,'AQUISITIONS','DELHI');
+SP2-0734: unknown command beginning "SQL> INSER..." - rest of line ignored.
+SQL> 
+SQL> 1 row created.
+SQL> 
+SQL> SQL>  INSERT INTO dept VALUES(80,'MERGERS','PUNE');
+SP2-0734: unknown command beginning "SQL>  INSE..." - rest of line ignored.
+SQL> 
+SQL> 1 row created.
+SQL> 
+SQL> SQL> INSERT INTO dept VALUES(80,'MANAGEMENT','HYDERABAD');
+SP2-0734: unknown command beginning "SQL> INSER..." - rest of line ignored.
+SP2-0044: For a list of known commands enter HELP
+and to leave enter EXIT.
+SQL> 
+SQL> 1 row created.
+SQL> 
+SQL> SQL> INSERT INTO dept VALUES(100,'INVESTMENTS','KOLKATA');
+SP2-0734: unknown command beginning "SQL> INSER..." - rest of line ignored.
+SQL> 
+SQL> 1 row created.
+SQL> 
+SQL> SQL> COMMIT
+SP2-0734: unknown command beginning "SQL> COMMI..." - rest of line ignored.
+SQL>   2  ;
+  2*              *
+SQL> 
+SQL> Commit complete.
+  2  
+SQL> SQL> select * DEPT;
+SP2-0734: unknown command beginning "SQL> selec..." - rest of line ignored.
+SQL> select * DEPT
+  2           *
+  3  ERROR at line 1:
+  4  ORA-00923: FROM keyword not found where expected
+  5  
+SQL> 
+SQL> SQL> select * from DEPT;
+SP2-0734: unknown command beginning "SQL> selec..." - rest of line ignored.
+SQL> 
+SQL>     DEPTNO DNAME                LOC
+SP2-0734: unknown command beginning "DEPTNO DNA..." - rest of line ignored.
+SQL> ---------- -------------------- --------------------
+SQL>         60 HR                   MUMBAI
+SQL>         10 ACCOUNTING           NEW YORK
+SQL>         20 RESEARCH             DALLAS
+SQL>         30 SALES                CHICAGO
+SQL>         40 OPERATIONS           BOSTON
+SQL>         50 IT                   NAGPUR
+SQL>         70 AQUISITIONS          DELHI
+SQL>         80 MERGERS              PUNE
+SQL>         80 MANAGEMENT           HYDERABAD
+SQL>        100 INVESTMENTS          KOLKATA
+SQL> 
+SQL> 10 rows selected.
+SQL> 
+SQL> SQL> select * from EMP;
+SP2-0734: unknown command beginning "SQL> selec..." - rest of line ignored.
+SQL> 
+SQL>        EMP ENAME                JOB                         MGR HIREDATE
+SP2-0734: unknown command beginning "EMP ENAME ..." - rest of line ignored.
+SQL> ---------- -------------------- -------------------- ---------- ---------
+SQL>        SAL       COMM     DEPTNO
+SP2-0734: unknown command beginning "SAL       ..." - rest of line ignored.
+SQL> ---------- ---------- ----------
+SQL>       1234 Saurabh
+SQL> 
+SQL> 
+SQL>       7369 Smith                Clerk                      7902 17-DEC-80
+SQL>       7000                    20
+SQL> 
+SQL>       7499 ALLEN                SALESMAN                   7698 20-FEB-81
+SQL>       1600        300         30
+SQL> 
+SQL> 
+SQL>        EMP ENAME                JOB                         MGR HIREDATE
+SP2-0734: unknown command beginning "EMP ENAME ..." - rest of line ignored.
+SQL> ---------- -------------------- -------------------- ---------- ---------
+SQL>        SAL       COMM     DEPTNO
+SP2-0734: unknown command beginning "SAL       ..." - rest of line ignored.
+SQL> ---------- ---------- ----------
+SQL>       7521 WARD                 SALESMAN                   7698 22-FEB-81
+SQL>       1250        500         30
+SQL> 
+SQL>       7566 JONES                MANAGER                    7839 02-APR-81
+SQL>       2975                    20
+SQL> 
+SQL>       7654 MARTIN               SALESMAN                   7698 28-SEP-81
+SQL>       1250       1400         30
+SQL> 
+SQL> 
+SQL>        EMP ENAME                JOB                         MGR HIREDATE
+SP2-0734: unknown command beginning "EMP ENAME ..." - rest of line ignored.
+SQL> ---------- -------------------- -------------------- ---------- ---------
+SQL>        SAL       COMM     DEPTNO
+SP2-0734: unknown command beginning "SAL       ..." - rest of line ignored.
+SQL> ---------- ---------- ----------
+SQL>       7698 BLAKE                MANAGER                    7839 01-MAY-81
+SQL>       2850                    30
+SQL> 
+SQL>       7698 CLARK                MANAGER                    7839 09-JUL-81
+SQL>       2450                    10
+SQL> 
+SQL>       7788 SCOT                 ANALYST                    7566 19-APR-87
+SQL>       3000                    20
+SQL> 
+SQL> 
+SQL>        EMP ENAME                JOB                         MGR HIREDATE
+SP2-0734: unknown command beginning "EMP ENAME ..." - rest of line ignored.
+SQL> ---------- -------------------- -------------------- ---------- ---------
+SQL>        SAL       COMM     DEPTNO
+SP2-0734: unknown command beginning "SAL       ..." - rest of line ignored.
+SQL> ---------- ---------- ----------
+SQL>       7839 KING                 PRESIDENT                       17-NOV-81
+SQL>       3500                    10
+SQL> 
+SQL>       7844 TURNER               SALESMAN                   7698 08-AUG-81
+SQL>       1500          0         30
+SQL> 
+SQL>       7876 ADAMS                CLERK                      7788 23-MAY-87
+SQL>       1100                    20
+SQL> 
+SQL> 
+SQL>        EMP ENAME                JOB                         MGR HIREDATE
+SP2-0734: unknown command beginning "EMP ENAME ..." - rest of line ignored.
+SQL> ---------- -------------------- -------------------- ---------- ---------
+SQL>        SAL       COMM     DEPTNO
+SP2-0734: unknown command beginning "SAL       ..." - rest of line ignored.
+SQL> ---------- ---------- ----------
+SQL>       7900 JAMES                CLERK                      7968 03-DEC-81
+SQL>        950                    30
+SQL> 
+SQL>       7902 FORD                 ANALYST                    7566 03-DEC-81
+SQL>       3000                    20
+SQL> 
+SQL>       7934 MILLER               CLERK                      7782 23-JAN-82
+SQL>       1300                    10
+SQL> 
+SQL> 
+SQL>        EMP ENAME                JOB                         MGR HIREDATE
+SP2-0734: unknown command beginning "EMP ENAME ..." - rest of line ignored.
+SQL> ---------- -------------------- -------------------- ---------- ---------
+SQL>        SAL       COMM     DEPTNO
+SP2-0734: unknown command beginning "SAL       ..." - rest of line ignored.
+SQL> ---------- ---------- ----------
+SQL>       7994 MILLES               CLERK                      7788 23-JAN-85
+SQL>       1300       1500         10
+SQL> 
+SQL>       7834 GARV                 SALESMAN                   7822 12-JAN-82
+SQL>       1500                    10
+SQL> 
+SQL>       8034 MILES                MANAGER                    7666 08-AUG-82
+SQL>       4300                    10
+SQL> 
+SQL> 
+SQL>        EMP ENAME                JOB                         MGR HIREDATE
+SP2-0734: unknown command beginning "EMP ENAME ..." - rest of line ignored.
+SQL> ---------- -------------------- -------------------- ---------- ---------
+SQL>        SAL       COMM     DEPTNO
+SP2-0734: unknown command beginning "SAL       ..." - rest of line ignored.
+SQL> ---------- ---------- ----------
+SQL>       8888 SAM                  CLERK                      7785 23-JAN-87
+SQL>       3300                    10
+SQL> 
+SQL> 
+SQL> 19 rows selected.
+SQL> 
+SQL> SQL> set linesize 600
+SP2-0734: unknown command beginning "SQL> set l..." - rest of line ignored.
+SQL> SQL> select * from EMP;
+SP2-0734: unknown command beginning "SQL> selec..." - rest of line ignored.
+SQL> 
+SQL>        EMP ENAME                JOB                         MGR HIREDATE         SAL       COMM     DEPTNO
+SP2-0734: unknown command beginning "EMP ENAME ..." - rest of line ignored.
+SQL> ---------- -------------------- -------------------- ---------- --------- ---------- ---------- ----------
+SQL>       1234 Saurabh
+SQL>       7369 Smith                Clerk                      7902 17-DEC-80       7000                    20
+SQL>       7499 ALLEN                SALESMAN                   7698 20-FEB-81       1600        300         30
+SQL>       7521 WARD                 SALESMAN                   7698 22-FEB-81       1250        500         30
+SQL>       7566 JONES                MANAGER                    7839 02-APR-81       2975                    20
+SQL>       7654 MARTIN               SALESMAN                   7698 28-SEP-81       1250       1400         30
+SQL>       7698 BLAKE                MANAGER                    7839 01-MAY-81       2850                    30
+SQL>       7698 CLARK                MANAGER                    7839 09-JUL-81       2450                    10
+SQL>       7788 SCOT                 ANALYST                    7566 19-APR-87       3000                    20
+SQL>       7839 KING                 PRESIDENT                       17-NOV-81       3500                    10
+SQL>       7844 TURNER               SALESMAN                   7698 08-AUG-81       1500          0         30
+SQL> 
+SQL>        EMP ENAME                JOB                         MGR HIREDATE         SAL       COMM     DEPTNO
+SP2-0734: unknown command beginning "EMP ENAME ..." - rest of line ignored.
+SQL> ---------- -------------------- -------------------- ---------- --------- ---------- ---------- ----------
+SQL>       7876 ADAMS                CLERK                      7788 23-MAY-87       1100                    20
+SQL>       7900 JAMES                CLERK                      7968 03-DEC-81        950                    30
+SQL>       7902 FORD                 ANALYST                    7566 03-DEC-81       3000                    20
+SQL>       7934 MILLER               CLERK                      7782 23-JAN-82       1300                    10
+SQL>       7994 MILLES               CLERK                      7788 23-JAN-85       1300       1500         10
+SQL>       7834 GARV                 SALESMAN                   7822 12-JAN-82       1500                    10
+SQL>       8034 MILES                MANAGER                    7666 08-AUG-82       4300                    10
+SQL>       8888 SAM                  CLERK                      7785 23-JAN-87       3300                    10
+SQL> 
+SQL> 19 rows selected.
+SQL> 
+SQL> SQL> insert into emp values(8868, 'WILLIAM', 'ANALYST',7885,TO_DATE('23-10-1987','dd-mm-yyyy'),3300,1000,10 );
+SP2-0734: unknown command beginning "SQL> inser..." - rest of line ignored.
+SQL> 
+SQL> 1 row created.
+SQL> 
+SQL> SQL> select * from EMP;
+SP2-0734: unknown command beginning "SQL> selec..." - rest of line ignored.
+SQL> 
+SQL>        EMP ENAME                JOB                         MGR HIREDATE         SAL       COMM     DEPTNO
+SP2-0734: unknown command beginning "EMP ENAME ..." - rest of line ignored.
+SQL> ---------- -------------------- -------------------- ---------- --------- ---------- ---------- ----------
+SQL>       1234 Saurabh
+SQL>       7369 Smith                Clerk                      7902 17-DEC-80       7000                    20
+SQL>       7499 ALLEN                SALESMAN                   7698 20-FEB-81       1600        300         30
+SQL>       7521 WARD                 SALESMAN                   7698 22-FEB-81       1250        500         30
+SQL>       7566 JONES                MANAGER                    7839 02-APR-81       2975                    20
+SQL>       7654 MARTIN               SALESMAN                   7698 28-SEP-81       1250       1400         30
+SQL>       7698 BLAKE                MANAGER                    7839 01-MAY-81       2850                    30
+SQL>       7698 CLARK                MANAGER                    7839 09-JUL-81       2450                    10
+SQL>       7788 SCOT                 ANALYST                    7566 19-APR-87       3000                    20
+SQL>       7839 KING                 PRESIDENT                       17-NOV-81       3500                    10
+SQL>       7844 TURNER               SALESMAN                   7698 08-AUG-81       1500          0         30
+SQL> 
+SQL>        EMP ENAME                JOB                         MGR HIREDATE         SAL       COMM     DEPTNO
+SP2-0734: unknown command beginning "EMP ENAME ..." - rest of line ignored.
+SQL> ---------- -------------------- -------------------- ---------- --------- ---------- ---------- ----------
+SQL>       7876 ADAMS                CLERK                      7788 23-MAY-87       1100                    20
+SQL>       7900 JAMES                CLERK                      7968 03-DEC-81        950                    30
+SQL>       7902 FORD                 ANALYST                    7566 03-DEC-81       3000                    20
+SQL>       7934 MILLER               CLERK                      7782 23-JAN-82       1300                    10
+SQL>       7994 MILLES               CLERK                      7788 23-JAN-85       1300       1500         10
+SQL>       7834 GARV                 SALESMAN                   7822 12-JAN-82       1500                    10
+SQL>       8034 MILES                MANAGER                    7666 08-AUG-82       4300                    10
+SQL>       8888 SAM                  CLERK                      7785 23-JAN-87       3300                    10
+SQL>       8868 WILLIAM              ANALYST                    7885 23-OCT-87       3300       1000         10
+SQL> 
+SQL> 20 rows selected.
+SQL> 
+SQL> SQL> COMMIT
+SP2-0734: unknown command beginning "SQL> COMMI..." - rest of line ignored.
+SQL>   2  ;
+  2*          *
+SQL> 
+SQL> Commit complete.
+  2  
+SQL> SQL> select * from DEPT;
+SP2-0734: unknown command beginning "SQL> selec..." - rest of line ignored.
+SQL> 
+SQL>     DEPTNO DNAME                LOC
+SP2-0734: unknown command beginning "DEPTNO DNA..." - rest of line ignored.
+SQL> ---------- -------------------- --------------------
+SQL>         60 HR                   MUMBAI
+SQL>         10 ACCOUNTING           NEW YORK
+SQL>         20 RESEARCH             DALLAS
+SQL>         30 SALES                CHICAGO
+SQL>         40 OPERATIONS           BOSTON
+SQL>         50 IT                   NAGPUR
+SQL>         70 AQUISITIONS          DELHI
+SQL>         80 MERGERS              PUNE
+SQL>         80 MANAGEMENT           HYDERABAD
+SQL>        100 INVESTMENTS          KOLKATA
+SQL> 
+SQL> 10 rows selected.
+SQL> 
+SQL> SQL> COMMIT;
+SP2-0734: unknown command beginning "SQL> COMMI..." - rest of line ignored.
+SQL> 
+SQL> Commit complete.
+  2  
+SQL> SQL> spool out;
+SP2-0734: unknown command beginning "SQL> spool..." - rest of line ignored.
+SQL> create table EMP(EMP number(4), ENAME VARCHAR2(20), JOB VARCHAR2(20), MGR NUMBER(4),HIREDATE DATE, SAL NUMBER(5), COMM NUMBER(4), DEPTNO(2));
+create table EMP(EMP number(4), ENAME VARCHAR2(20), JOB VARCHAR2(20), MGR NUMBER(4),HIREDATE DATE, SAL NUMBER(5), COMM NUMBER(4), DEPTNO(2))
+                                                                                                                                        *
+ERROR at line 1:
+ORA-00902: invalid datatype 
+
+
+SQL> create table EMP(EMP number(4), ENAME VARCHAR2(20), JOB VARCHAR2(20), MGR NUMBER(4),HIREDATE DATE, SAL NUMBER(5), COMM NUMBER(4), DEPTNO(2));
+create table EMP(EMP number(4), ENAME VARCHAR2(20), JOB VARCHAR2(20), MGR NUMBER(4),HIREDATE DATE, SAL NUMBER(5), COMM NUMBER(4), DEPTNO(2))
+                                                                                                                                        *
+ERROR at line 1:
+ORA-00902: invalid datatype 
+
+
+SQL> create table EMP(EMP number(4), ENAME VARCHAR2(20), JOB VARCHAR2(20), MGR NUMBER(4),HIREDATE DATE, SAL NUMBER(5), COMM NUMBER(4), DEPTNO NUMBER(2));
+
+Table created.
+
+SQL> DECS EMP;
+SP2-0042: unknown command "DECS EMP" - rest of line ignored.
+SQL> DECS EMP
+SP2-0042: unknown command "DECS EMP" - rest of line ignored.
+SQL> DESC EMP
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ EMP                                                NUMBER(4)
+ ENAME                                              VARCHAR2(20)
+ JOB                                                VARCHAR2(20)
+ MGR                                                NUMBER(4)
+ HIREDATE                                           DATE
+ SAL                                                NUMBER(5)
+ COMM                                               NUMBER(4)
+ DEPTNO                                             NUMBER(2)
+
+SQL> insert into emp values(1234, 'Saurabh', NULL, NULL, NULL, NULL, NULL, NULL)
+  2    2  ;
+  2  
+  *
+ERROR at line 2:
+ORA-00933: SQL command not properly ended 
+
+
+SQL> 
+SQL> 1 row created.
+SQL> 
+SQL> SQL> INSERT INTO emp VALUES(7369,'Smith','Clerk',7902,'17-DEC-80',7000,NULL,20);
+SP2-0734: unknown command beginning "SQL> INSER..." - rest of line ignored.
+SQL> 
+SQL> 1 row created.
+SQL> 
+SQL> SQL> select * from EMP;
+SP2-0734: unknown command beginning "SQL> selec..." - rest of line ignored.
+SQL> 
+SQL>        EMP ENAME                JOB                         MGR HIREDATE
+SP2-0734: unknown command beginning "EMP ENAME ..." - rest of line ignored.
+SQL> ---------- -------------------- -------------------- ---------- ---------
+SQL>        SAL       COMM     DEPTNO
+SP2-0734: unknown command beginning "SAL       ..." - rest of line ignored.
+SQL> ---------- ---------- ----------
+SQL>       1234 Saurabh
+SQL> 
+SQL> 
+SQL>       7369 Smith                Clerk                      7902 17-DEC-80
+SQL>       7000                    20
+SQL> 
+SQL> 
+SQL> SQL> insert into emp values(7499, 'ALLEN', 'SALESMAN',7698,TO_DATE('20-02-1981','dd-mm-yyyy'),1600,300,30 );
+SP2-0734: unknown command beginning "SQL> inser..." - rest of line ignored.
+SQL> 
+SQL> 1 row created.
+SQL> 
+SQL> SQL>
+SP2-0042: unknown command "SQL>" - rest of line ignored.
+SQL> SQL> insert into emp values(7521, 'WARD', 'SALESMAN',7698,TO_DATE('22-02-1981','dd-mm-yyyy'),1250,500,30 );
+SP2-0734: unknown command beginning "SQL> inser..." - rest of line ignored.
+SQL> 
+SQL> 1 row created.
+SQL> 
+SQL> SQL>
+SP2-0042: unknown command "SQL>" - rest of line ignored.
+SP2-0044: For a list of known commands enter HELP
+and to leave enter EXIT.
+SQL> SQL>
+SP2-0042: unknown command "SQL>" - rest of line ignored.
+SQL> SQL> insert into emp values(7566, 'JONES', 'MANAGER',7839,TO_DATE('02-04-1981','dd-mm-yyyy'),2975,NULL,20 );
+SP2-0734: unknown command beginning "SQL> inser..." - rest of line ignored.
+SQL> 
+SQL> 1 row created.
+SQL> 
+SQL> SQL> select * from EMP;
+SP2-0734: unknown command beginning "SQL> selec..." - rest of line ignored.
+SQL> 
+SQL>        EMP ENAME                JOB                         MGR HIREDATE
+SP2-0734: unknown command beginning "EMP ENAME ..." - rest of line ignored.
+SP2-0044: For a list of known commands enter HELP
+and to leave enter EXIT.
+SQL> ---------- -------------------- -------------------- ---------- ---------
+SQL>        SAL       COMM     DEPTNO
+SP2-0734: unknown command beginning "SAL       ..." - rest of line ignored.
+SQL> ---------- ---------- ----------
+SQL>       1234 Saurabh
+SQL> 
+SQL> 
+SQL>       7369 Smith                Clerk                      7902 17-DEC-80
+SQL>       7000                    20
+SQL> 
+SQL>       7499 ALLEN                SALESMAN                   7698 20-FEB-81
+SQL>       1600        300         30
+SQL> 
+SQL> 
+SQL>        EMP ENAME                JOB                         MGR HIREDATE
+SP2-0734: unknown command beginning "EMP ENAME ..." - rest of line ignored.
+SQL> ---------- -------------------- -------------------- ---------- ---------
+SQL>        SAL       COMM     DEPTNO
+SP2-0734: unknown command beginning "SAL       ..." - rest of line ignored.
+SQL> ---------- ---------- ----------
+SQL>       7521 WARD                 SALESMAN                   7698 22-FEB-81
+SQL>       1250        500         30
+SQL> 
+SQL>       7566 JONES                MANAGER                    7839 02-APR-81
+SQL>       2975                    20
+SQL> 
+SQL> 
+SQL> SQL>
+SP2-0042: unknown command "SQL>" - rest of line ignored.
+SQL> SQL> insert into emp values(7654, 'MARTIN', 'SALESMAN',7698,TO_DATE('02-04-1981','dd-mm-yyyy'),1250,1400,30 );
+SP2-0734: unknown command beginning "SQL> inser..." - rest of line ignored.
+SQL> insert into emp values(7654, 'MARTIN', 'SALESMAN',7698,TO_DATE('02-04-1981','dd-mm-yyyy'),1250,1400,30 )
+  2                                                                                                        *
+  3  ERROR at line 1:
+  4  ORA-00917: missing comma
+  5  
+SQL> 
+SQL> SQL> insert into emp values(7654, 'MARTIN', 'SALESMAN',7698,TO_DATE('02-04-1981','dd-mm-yyyy'),1250,1400,30 );
+SP2-0734: unknown command beginning "SQL> inser..." - rest of line ignored.
+SQL> insert into emp values(7654, 'MARTIN', 'SALESMAN',7698,TO_DATE('02-04-1981','dd-mm-yyyy'),1250,1400,30 )
+  2                                                                                                        *
+  3  ERROR at line 1:
+  4  ORA-00917: missing comma
+  5  
+SQL> 
+SQL> SQL> insert into emp values(7654, 'MARTIN', 'SALESMAN',7698,TO_DATE('28-09-1981','dd-mm-yyyy'),1250,1400,30 );
+SP2-0734: unknown command beginning "SQL> inser..." - rest of line ignored.
+SQL> 
+SQL> 1 row created.
+SQL> 
+SQL> SQL> insert into emp values(7698,'BLAKE', 'MANAGER',7839,TO_DATE('01-05-1981','dd-mm-yyyy'),2850,NULL,30 );
+SP2-0734: unknown command beginning "SQL> inser..." - rest of line ignored.
+SQL> 
+SQL> 1 row created.
+SQL> 
+SQL> SQL> insert into emp values(7698,'CLARK', 'MANAGER',7839,TO_DATE('09-07-1981','dd-mm-yyyy'),2450,NULL,10 );
+SP2-0734: unknown command beginning "SQL> inser..." - rest of line ignored.
+SQL> 
+SQL> 1 row created.
+SQL> 
+SQL> SQL> insert into emp values(7788,'SCOT', 'ANALYST',7566,TO_DATE('19-04-1987','dd-mm-yyyy'),3000,NULL,20 );
+SP2-0734: unknown command beginning "SQL> inser..." - rest of line ignored.
+SP2-0044: For a list of known commands enter HELP
+and to leave enter EXIT.
+SQL> 
+SQL> 1 row created.
+SQL> 
+SQL> SQL> insert into emp values(7839,'KING', 'PRESIDENT',NULL,TO_DATE('17-11-1981','dd-mm-yyyy'),3500,NULL,10 );
+SP2-0734: unknown command beginning "SQL> inser..." - rest of line ignored.
+SQL> 
+SQL> 1 row created.
+SQL> 
+SQL> SQL> insert into emp values(7844,'TURNER', 'SALESMAN',7698,TO_DATE('08-08-1981','dd-mm-yyyy'),1500,0,30 );
+SP2-0734: unknown command beginning "SQL> inser..." - rest of line ignored.
+SQL> 
+SQL> 1 row created.
+SQL> 
+SQL> SQL> insert into emp values(7876, 'ADAMS', 'CLERK',7788,TO_DATE('23-05-1987','dd-mm-yyyy'),1100,NULL,20 );
+SP2-0734: unknown command beginning "SQL> inser..." - rest of line ignored.
+SQL> 
+SQL> 1 row created.
+SQL> 
+SQL> SQL> insert into emp values(7900, 'JAMES', 'CLERK',7968,TO_DATE('3-12-1981','dd-mm-yyyy'),950,NULL,30 );
+SP2-0734: unknown command beginning "SQL> inser..." - rest of line ignored.
+SP2-0044: For a list of known commands enter HELP
+and to leave enter EXIT.
+SQL> 
+SQL> 1 row created.
+SQL> 
+SQL> SQL> insert into emp values(7902, 'FORD', 'ANALYST',7566,TO_DATE('3-12-1981','dd-mm-yyyy'),3000,NULL,20 );
+SP2-0734: unknown command beginning "SQL> inser..." - rest of line ignored.
+SQL> 
+SQL> 1 row created.
+SQL> 
+SQL> SQL> insert into emp values(7934, 'MILLER', 'CLERK',7782,TO_DATE('23-1-1982','dd-mm-yyyy'),1300,NULL,10 );
+SP2-0734: unknown command beginning "SQL> inser..." - rest of line ignored.
+SQL> 
+SQL> 1 row created.
+SQL> 
+SQL> SQL> insert into emp values(7994, 'MILLES', 'CLERK',7788,TO_DATE('23-1-1985','dd-mm-yyyy'),1300,1500,10 );
+SP2-0734: unknown command beginning "SQL> inser..." - rest of line ignored.
+SQL> 
+SQL> 1 row created.
+SQL> 
+SQL> SQL>
+SP2-0042: unknown command "SQL>" - rest of line ignored.
+SP2-0044: For a list of known commands enter HELP
+and to leave enter EXIT.
+SQL> SQL> insert into emp values(7834, 'GARV', 'SALESMAN',7822,TO_DATE('12-1-1982','dd-mm-yyyy'),1500,NULL,10 );
+SP2-0734: unknown command beginning "SQL> inser..." - rest of line ignored.
+SQL> 
+SQL> 1 row created.
+SQL> 
+SQL> SQL> insert into emp values(8034, 'MILES', 'MANAGER',7666,TO_DATE('08-08-1982','dd-mm-yyyy'),4300,NULL,10 );
+SP2-0734: unknown command beginning "SQL> inser..." - rest of line ignored.
+SQL> 
+SQL> 1 row created.
+SQL> 
+SQL> SQL> insert into emp values(8888, 'SAM', 'CLERK',7785,TO_DATE('23-1-1987','dd-mm-yyyy'),3300,NULL,10 );
+SP2-0734: unknown command beginning "SQL> inser..." - rest of line ignored.
+SQL> 
+SQL> 1 row created.
+SQL> 
+SQL> SQL> select * from EMP
+SP2-0734: unknown command beginning "SQL> selec..." - rest of line ignored.
+SP2-0044: For a list of known commands enter HELP
+and to leave enter EXIT.
+SQL>   2  ;
+  2*                                                                                                       *
+SQL> 
+SQL>        EMP ENAME                JOB                         MGR HIREDATE
+SP2-0734: unknown command beginning "EMP ENAME ..." - rest of line ignored.
+SQL> ---------- -------------------- -------------------- ---------- ---------
+SQL>        SAL       COMM     DEPTNO
+SP2-0734: unknown command beginning "SAL       ..." - rest of line ignored.
+SQL> ---------- ---------- ----------
+SQL>       1234 Saurabh
+SQL> 
+SQL> 
+SQL>       7369 Smith                Clerk                      7902 17-DEC-80
+SQL>       7000                    20
+SQL> 
+SQL>       7499 ALLEN                SALESMAN                   7698 20-FEB-81
+SQL>       1600        300         30
+SQL> 
+SQL> 
+SQL>        EMP ENAME                JOB                         MGR HIREDATE
+SP2-0734: unknown command beginning "EMP ENAME ..." - rest of line ignored.
+SQL> ---------- -------------------- -------------------- ---------- ---------
+SQL>        SAL       COMM     DEPTNO
+SP2-0734: unknown command beginning "SAL       ..." - rest of line ignored.
+SQL> ---------- ---------- ----------
+SQL>       7521 WARD                 SALESMAN                   7698 22-FEB-81
+SQL>       1250        500         30
+SQL> 
+SQL>       7566 JONES                MANAGER                    7839 02-APR-81
+SQL>       2975                    20
+SQL> 
+SQL>       7654 MARTIN               SALESMAN                   7698 28-SEP-81
+SQL>       1250       1400         30
+SQL> 
+SQL> 
+SQL>        EMP ENAME                JOB                         MGR HIREDATE
+SP2-0734: unknown command beginning "EMP ENAME ..." - rest of line ignored.
+SQL> ---------- -------------------- -------------------- ---------- ---------
+SQL>        SAL       COMM     DEPTNO
+SP2-0734: unknown command beginning "SAL       ..." - rest of line ignored.
+SQL> ---------- ---------- ----------
+SQL>       7698 BLAKE                MANAGER                    7839 01-MAY-81
+SQL>       2850                    30
+SQL> 
+SQL>       7698 CLARK                MANAGER                    7839 09-JUL-81
+SQL>       2450                    10
+SQL> 
+SQL>       7788 SCOT                 ANALYST                    7566 19-APR-87
+SQL>       3000                    20
+SQL> 
+SQL> 
+SQL>        EMP ENAME                JOB                         MGR HIREDATE
+SP2-0734: unknown command beginning "EMP ENAME ..." - rest of line ignored.
+SQL> ---------- -------------------- -------------------- ---------- ---------
+SQL>        SAL       COMM     DEPTNO
+SP2-0734: unknown command beginning "SAL       ..." - rest of line ignored.
+SQL> ---------- ---------- ----------
+SQL>       7839 KING                 PRESIDENT                       17-NOV-81
+SQL>       3500                    10
+SQL> 
+SQL>       7844 TURNER               SALESMAN                   7698 08-AUG-81
+SQL>       1500          0         30
+SQL> 
+SQL>       7876 ADAMS                CLERK                      7788 23-MAY-87
+SQL>       1100                    20
+SQL> 
+SQL> 
+SQL>        EMP ENAME                JOB                         MGR HIREDATE
+SP2-0734: unknown command beginning "EMP ENAME ..." - rest of line ignored.
+SQL> ---------- -------------------- -------------------- ---------- ---------
+SQL>        SAL       COMM     DEPTNO
+SP2-0734: unknown command beginning "SAL       ..." - rest of line ignored.
+SQL> ---------- ---------- ----------
+SQL>       7900 JAMES                CLERK                      7968 03-DEC-81
+SQL>        950                    30
+SQL> 
+SQL>       7902 FORD                 ANALYST                    7566 03-DEC-81
+SQL>       3000                    20
+SQL> 
+SQL>       7934 MILLER               CLERK                      7782 23-JAN-82
+SQL>       1300                    10
+SQL> 
+SQL> 
+SQL>        EMP ENAME                JOB                         MGR HIREDATE
+SP2-0734: unknown command beginning "EMP ENAME ..." - rest of line ignored.
+SQL> ---------- -------------------- -------------------- ---------- ---------
+SQL>        SAL       COMM     DEPTNO
+SP2-0734: unknown command beginning "SAL       ..." - rest of line ignored.
+SQL> ---------- ---------- ----------
+SQL>       7994 MILLES               CLERK                      7788 23-JAN-85
+SQL>       1300       1500         10
+SQL> 
+SQL>       7834 GARV                 SALESMAN                   7822 12-JAN-82
+SQL>       1500                    10
+SQL> 
+SQL>       8034 MILES                MANAGER                    7666 08-AUG-82
+SQL>       4300                    10
+SQL> 
+SQL> 
+SQL>        EMP ENAME                JOB                         MGR HIREDATE
+SP2-0734: unknown command beginning "EMP ENAME ..." - rest of line ignored.
+SQL> ---------- -------------------- -------------------- ---------- ---------
+SQL>        SAL       COMM     DEPTNO
+SP2-0734: unknown command beginning "SAL       ..." - rest of line ignored.
+SQL> ---------- ---------- ----------
+SQL>       8888 SAM                  CLERK                      7785 23-JAN-87
+SQL>       3300                    10
+SQL> 
+SQL> 
+SQL> 19 rows selected.
+SQL> 
+SQL> SQL> COMMIT
+SP2-0734: unknown command beginning "SQL> COMMI..." - rest of line ignored.
+SQL>   2  ;
+  2*                                                                                                       *
+SQL> 
+SQL> SELECT * FROM EMP;
+
+no rows selected
+
+SQL> insert into emp values(1234, 'Saurabh', NULL, NULL, NULL, NULL, NULL, NULL)
+  2    2  ;
+  2  
+  *
+ERROR at line 2:
+ORA-00933: SQL command not properly ended 
+
+
+SQL> insert into emp values(1234, 'Saurabh', NULL, NULL, NULL, NULL, NULL, NULL)
+  2  insert into emp values(1234, 'Saurabh', NULL, NULL, NULL, NULL, NULL, NULL);
+insert into emp values(1234, 'Saurabh', NULL, NULL, NULL, NULL, NULL, NULL)
+*
+ERROR at line 2:
+ORA-00933: SQL command not properly ended 
+
+
+SQL> insert into emp values(1234, 'Saurabh', NULL, NULL, NULL, NULL, NULL, NULL);
+
+1 row created.
+
+SQL> insert into emp values(1234, 'Saurabh', NULL, NULL, NULL, NULL, NULL, NULL);
+
+1 row created.
+
+SQL> INSERT INTO emp VALUES(7369,'Smith','Clerk',7902,'17-DEC-80',7000,NULL,20);
+
+1 row created.
+
+SQL> insert into emp values(7499, 'ALLEN', 'SALESMAN',7698,TO_DATE('20-02-1981','dd-mm-yyyy'),1600,300,30 );
+
+1 row created.
+
+SQL> insert into emp values(7521, 'WARD', 'SALESMAN',7698,TO_DATE('22-02-1981','dd-mm-yyyy'),1250,500,30 );
+
+1 row created.
+
+SQL> insert into emp values(7566, 'JONES', 'MANAGER',7839,TO_DATE('02-04-1981','dd-mm-yyyy'),2975,NULL,20 );
+
+1 row created.
+
+SQL> insert into emp values(7654, 'MARTIN', 'SALESMAN',7698,TO_DATE('28-09-1981','dd-mm-yyyy'),1250,1400,30 );
+
+1 row created.
+
+SQL> insert into emp values(7698,'BLAKE', 'MANAGER',7839,TO_DATE('01-05-1981','dd-mm-yyyy'),2850,NULL,30 );
+
+1 row created.
+
+SQL> insert into emp values(7698,'CLARK', 'MANAGER',7839,TO_DATE('09-07-1981','dd-mm-yyyy'),2450,NULL,10 );
+
+1 row created.
+
+SQL> insert into emp values(7788,'SCOT', 'ANALYST',7566,TO_DATE('19-04-1987','dd-mm-yyyy'),3000,NULL,20 );
+
+1 row created.
+
+SQL> insert into emp values(7839,'KING', 'PRESIDENT',NULL,TO_DATE('17-11-1981','dd-mm-yyyy'),3500,NULL,10 );
+
+1 row created.
+
+SQL> insert into emp values(7844,'TURNER', 'SALESMAN',7698,TO_DATE('08-08-1981','dd-mm-yyyy'),1500,0,30 );
+
+1 row created.
+
+SQL> insert into emp values(7876, 'ADAMS', 'CLERK',7788,TO_DATE('23-05-1987','dd-mm-yyyy'),1100,NULL,20 );
+
+1 row created.
+
+SQL> insert into emp values(7900, 'JAMES', 'CLERK',7968,TO_DATE('3-12-1981','dd-mm-yyyy'),950,NULL,30 );
+
+1 row created.
+
+SQL> insert into emp values(7902, 'FORD', 'ANALYST',7566,TO_DATE('3-12-1981','dd-mm-yyyy'),3000,NULL,20 );insert into emp values(7902, 'FORD', 'ANALYST',7566,TO_DATE('3-12-1981','dd-mm-yyyy'),3000,NULL,20 );
+insert into emp values(7902, 'FORD', 'ANALYST',7566,TO_DATE('3-12-1981','dd-mm-yyyy'),3000,NULL,20 );insert into emp values(7902, 'FORD', 'ANALYST',7566,TO_DATE('3-12-1981','dd-mm-yyyy'),3000,NULL,20 )
+                                                                                                    *
+ERROR at line 1:
+ORA-00911: invalid character 
+
+
+SQL> insert into emp values(7902, 'FORD', 'ANALYST',7566,TO_DATE('3-12-1981','dd-mm-yyyy'),3000,NULL,20 );
+
+1 row created.
+
+SQL> insert into emp values(7934, 'MILLER', 'CLERK',7782,TO_DATE('23-1-1982','dd-mm-yyyy'),1300,NULL,10 );
+
+1 row created.
+
+SQL> insert into emp values(7994, 'MILLES', 'CLERK',7788,TO_DATE('23-1-1985','dd-mm-yyyy'),1300,1500,10 );
+
+1 row created.
+
+SQL> v
+SP2-0042: unknown command "v" - rest of line ignored.
+SQL> insert into emp values(7834, 'GARV', 'SALESMAN',7822,TO_DATE('12-1-1982','dd-mm-yyyy'),1500,NULL,10 );
+
+1 row created.
+
+SQL> insert into emp values(8034, 'MILES', 'MANAGER',7666,TO_DATE('08-08-1982','dd-mm-yyyy'),4300,NULL,10 );
+
+1 row created.
+
+SQL> insert into emp values(8888, 'SAM', 'CLERK',7785,TO_DATE('23-1-1987','dd-mm-yyyy'),3300,NULL,10 );
+
+1 row created.
+
+SQL> select * from EMP;
+
+       EMP ENAME                JOB                         MGR HIREDATE        
+---------- -------------------- -------------------- ---------- ---------       
+       SAL       COMM     DEPTNO                                                
+---------- ---------- ----------                                                
+      1234 Saurabh                                                              
+                                                                                
+                                                                                
+      1234 Saurabh                                                              
+                                                                                
+                                                                                
+      7369 Smith                Clerk                      7902 17-DEC-80       
+      7000                    20                                                
+                                                                                
+
+       EMP ENAME                JOB                         MGR HIREDATE        
+---------- -------------------- -------------------- ---------- ---------       
+       SAL       COMM     DEPTNO                                                
+---------- ---------- ----------                                                
+      7499 ALLEN                SALESMAN                   7698 20-FEB-81       
+      1600        300         30                                                
+                                                                                
+      7521 WARD                 SALESMAN                   7698 22-FEB-81       
+      1250        500         30                                                
+                                                                                
+      7566 JONES                MANAGER                    7839 02-APR-81       
+      2975                    20                                                
+                                                                                
+
+       EMP ENAME                JOB                         MGR HIREDATE        
+---------- -------------------- -------------------- ---------- ---------       
+       SAL       COMM     DEPTNO                                                
+---------- ---------- ----------                                                
+      7654 MARTIN               SALESMAN                   7698 28-SEP-81       
+      1250       1400         30                                                
+                                                                                
+      7698 BLAKE                MANAGER                    7839 01-MAY-81       
+      2850                    30                                                
+                                                                                
+      7698 CLARK                MANAGER                    7839 09-JUL-81       
+      2450                    10                                                
+                                                                                
+
+       EMP ENAME                JOB                         MGR HIREDATE        
+---------- -------------------- -------------------- ---------- ---------       
+       SAL       COMM     DEPTNO                                                
+---------- ---------- ----------                                                
+      7788 SCOT                 ANALYST                    7566 19-APR-87       
+      3000                    20                                                
+                                                                                
+      7839 KING                 PRESIDENT                       17-NOV-81       
+      3500                    10                                                
+                                                                                
+      7844 TURNER               SALESMAN                   7698 08-AUG-81       
+      1500          0         30                                                
+                                                                                
+
+       EMP ENAME                JOB                         MGR HIREDATE        
+---------- -------------------- -------------------- ---------- ---------       
+       SAL       COMM     DEPTNO                                                
+---------- ---------- ----------                                                
+      7876 ADAMS                CLERK                      7788 23-MAY-87       
